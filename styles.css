@@ -16,37 +16,22 @@ body {
 
 /* Estilos de la sección de inicio */
 header {
-    text-align: left;
     color: white;
-    background-color: #333;
-    padding: 1rem 0;
+    background-color: #15141A;
     display: flex; /* Utilizamos flexbox para distribuir los elementos */
     align-items: center; /* Centramos verticalmente los elementos */
+    justify-content: center;
+    font-size: 44px;
 }
 
-/* header p {} */
-
-
-header h1 {
-    flex: 1; /* El texto ocupa el espacio disponible */
-    text-align: left; /* Alineamos el texto a la izquierda */
-    margin: 0; /* Eliminamos el margen predeterminado */
+header div {
+    padding-left: 150px;
 }
 
 header img {
-    max-width: 200px;
-    border-radius: 30%;
-    margin-top: 20px;
-    margin-left: auto;
+    max-width: 800px;
+    padding-right: 150px;
 }
-
-/* Estilos para el botón en el encabezado (debajo del texto) */
-header button {
-    text-align: left; /* Alineamos el botón a la izquierda */
-    display: block; /* Hacemos que el botón sea un bloque para que esté debajo del texto */
-    margin-top: 20px; /* Agregamos un margen superior para separar el botón del texto */
-}
-
 
 .container {
     max-width: 1200px;
@@ -149,7 +134,7 @@ footer {
 
 /* Estilos de la máquina de escribir */
 #typing-text {
-    font-size: 24px;
+    font-size: 50px;
 }
 
 
