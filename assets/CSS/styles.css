@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Michroma", sans-serif;
+    height: 100vh;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8f9fa;
+}
+
+/* ........................................................................... */
+
+.loading-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #15141A;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: #191654;
+}
+
+#svg {
+    height: 150px;
+    width: 150px;
+    stroke: white;
+    fill-opacity: 0;
+    stroke-width: 3px;
+    stroke-dasharray: 4500;
+    animation: draw 8s ease;
+}
+
+@keyframes draw {
+    0% {
+    stroke-dashoffset: 4500;
+    }
+    100% {
+    stroke-dashoffset: 0;
+    }
+}
+
+.name-container {
+    height: 30px;
+    overflow: hidden;
+}
+
+.logo-name {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+
+  /* ............................................................................. */
+
+
+/* Estilos de la sección de inicio */
+header {
+    color: white;
+    background-color: #15141A;
+    display: flex; /* Utilizamos flexbox para distribuir los elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+    justify-content: space-between;
+    font-size: 44px;
+    font-family: 'Quicksand', sans-serif;
+}   
+
+header div {
+    padding-left: 120px;
+}
+
+header img {
+    max-width: 800px;
+    padding-right: 120px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: rgba(204, 136, 9, 0.747);
+}
+
+section {
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    font-size: 24px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #e68200;
+}
+
+/* --------------------------------------------- */
+
+.tec-logos {
+    display: flex;
+    justify-content: space-around; /* Espacio entre las tarjetas */
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.logo-card {
+    text-align: center; /* Centra el texto */
+    width: 200px; /* Ancho de cada tarjeta */
+    padding: 20px; /* Espaciado interno de la tarjeta */
+    background-color: #fff; /* Color de fondo de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    transform: translateY(20px); /* Inicialmente, desplaza las tarjetas hacia abajo */
+    transition: transform 0.5s;
+    margin-top: 50px;
+}
+
+.tec-logos .logo-card {
+    animation: slide-up 1s ease-in-out forwards; /* Aplica la animación cuando el usuario llega a la sección */
+}
+
+@keyframes slide-up {
+    to {
+        transform: translateY(0); /* Mueve la tarjeta hacia arriba */
+    }
+}
+
+
+.logo-card:hover {
+    transform: translateY(-5px); /* Efecto de selección al pasar el cursor */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el cursor */
+    animation: slide-up 2s
+}
+
+.svg-color-html {
+    fill: #E34F26; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de HTML5 */
+}
+
+.svg-color-css {
+    fill: #1572B6; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+}
+
+.svg-color-git {
+    fill: #F05032; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+}
+
+.svg-color-js {
+    fill: rgb(228, 228, 10); /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+}
+
+.svg-color-node {
+    fill: #07a002; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+}
+
+.svg-color-react {
+    fill: #61DAFB; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+}
+
+/* ---------------------------------------------- */
+
+.contactos {
+    display: flex;
+    justify-content: center; /* Espacio entre las tarjetas */
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.contacto-card {
+    text-align: center; /* Centra el texto */
+    width: 100px; /* Ancho de cada tarjeta */
+    height: 150px;
+    padding: 20px; /* Espaciado interno de la tarjeta */
+    background-color: #fff; /* Color de fondo de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    transform: translateY(20px); /* Inicialmente, desplaza las tarjetas hacia abajo */
+    transition: transform 0.5s;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.contactos .contacto-card {
+    animation: slide-up 1s ease-in-out forwards; /* Aplica la animación cuando el usuario llega a la sección */
+}
+
+@keyframes slide-up {
+    to {
+        transform: translateY(0); /* Mueve la tarjeta hacia arriba */
+    }
+}
+
+
+.contacto-card:hover {
+    transform: translateY(-5px); /* Efecto de selección al pasar el cursor */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el cursor */
+    animation: slide-up 2s
+}
+
+.svg-color-wp {
+    fill: #25D366; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+}
+
+.svg-color-correo {
+    fill: #0072C6; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+}
+
+.svg-color-linkedin {
+    fill: #0077B5; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+}
+
+.svg-color-github {
+    fill: #000000; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+}
+
+/* ---------------------------------------------- */
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.game {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    margin: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    margin: 20px;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.project p {
+    font-size: 14px;
+    color: #777;
+}
+
+
+
+/* Estilos de la máquina de escribir */
+#typing-text {
+    font-size: 50px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.project img {
+    max-width: 100%;
+}
+
+/* Otros estilos personalizados según tus preferencias */
+
+/* Estilos de botón */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Estilos de las imágenes y más */
+
