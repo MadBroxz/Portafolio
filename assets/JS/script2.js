@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Escucha el evento scroll para actualizar el título
 document.addEventListener('scroll', function () {
-    const sections = ["home", "acerca", "proyectos", "contacto"];
+    const sections = ["home", "acerca", "proyectos", "Game" ,"contacto"];
     const scrollPosition = window.scrollY + 1;
 
         for (let i = sections.length - 1; i >= 0; i--) {
     const section = document.getElementById(sections[i]);
-        if (section.offsetTop <= scrollPosition) {
+        if (section.offsetTop - 300 <= scrollPosition) {
         changeTitle(sections[i].charAt(0).toUpperCase() + sections[i].slice(1));
         break;
 }
