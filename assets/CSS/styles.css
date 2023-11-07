@@ -200,7 +200,7 @@ button:hover {
 
 .tec-logos {
     display: flex;
-    justify-content: space-around; /* Espacio entre las tarjetas */
+    justify-content: space-around; 
     flex-wrap: wrap;
     gap: 20px; /* Espacio entre las tarjetas */
 }
@@ -278,19 +278,19 @@ button:hover {
     color: #28282c;
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
-    transform: translateY(20px); /* Inicialmente, desplaza las tarjetas hacia abajo */
+    transform: translateY(20px); 
     transition: transform 0.5s;
     margin-top: 30px;
     margin-bottom: 40px;
 }
 
 .contactos .contacto-card {
-    animation: slide-up 1s ease-in-out forwards; /* Aplica la animación cuando el usuario llega a la sección */
+    animation: slide-up 1s ease-in-out forwards; 
 }
 
 @keyframes slide-up {
     to {
-        transform: translateY(0); /* Mueve la tarjeta hacia arriba */
+        transform: translateY(0); 
     }
 }
 
@@ -303,19 +303,19 @@ button:hover {
 }
 
 .svg-color-wp {
-    fill: #25D366; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+    fill: #25D366; 
 }
 
 .svg-color-correo {
-    fill: #0072C6; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+    fill: #0072C6; 
 }
 
 .svg-color-linkedin {
-    fill: #0077B5; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+    fill: #0077B5; 
 }
 
 .svg-color-github {
-    fill: #000000; /* Cambia el color del contenido del SVG al pasar el cursor sobre la tarjeta de CSS3 */
+    fill: #000000; 
 }
 
 /* ---------------------------------------------- */
@@ -337,11 +337,12 @@ button:hover {
 
 .Gamer { 
     flex: 1;
-    max-width: 85%; /* Establece un ancho máximo para la imagen */
+    max-width: 85%; 
     height: auto;
     display: flex;
     align-items: center; 
     justify-content: center; 
+    border-radius: 30px;
 }
 
 .games {
@@ -351,11 +352,18 @@ button:hover {
 }
 
 .game {
-    border: 1px solid #ddd;
-    padding: 20px;
-    background-color: #fff;
+    padding: 10px;
+    background-color: #3b3b3f;
     transition: transform 0.3s ease-in-out;
-    margin: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+
+.game p {
+    max-width: 100%;
 }
 
 .projects {
@@ -399,5 +407,5 @@ button:hover {
     max-width: 100%;
 }
 
-/* Otros estilos personalizados según tus preferencias */
+
 

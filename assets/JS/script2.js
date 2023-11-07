@@ -1,4 +1,4 @@
-// // Función para descargar el PDF (reemplaza con el enlace correcto)
+// // Función para descargar el PDF
 function descargarPDF() {
     const urlDelPDF = "./assets/files/CV-Luis-Mota.pdf"
     window.location.href = urlDelPDF
