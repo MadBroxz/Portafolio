@@ -35,7 +35,7 @@ body {
     gap: 1.5rem;
     align-items: center;
     justify-content: center;
-    color: #191654;
+    z-index: 9999;
 }
 
 #svg {
@@ -83,6 +83,7 @@ header {
     justify-content: space-between;
     font-size: 44px;
     font-family: 'Quicksand', sans-serif;
+    max-width: 1800px;
 }   
 
 header div {
@@ -113,8 +114,11 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #15141A;
     padding: 0.5rem;
+    width: 100%;
+    height: 50px;
 }
 
 nav a {
@@ -122,20 +126,80 @@ nav a {
     text-decoration: none;
     margin: 0 1rem;
     transition: color 0.3s ease-in-out;
+    height: 50px;
 }
 
 nav a:hover {
     color: #4B6CC1;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 50px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para el ícono */
+#icon-trigger img {
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#icon-trigger2 img {
+    width: 50px; 
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#icon-message img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilo para el mensaje con la imagen (ocultarlo inicialmente)*/
+#icon-message {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background-color: #fff; /* Fondo blanco inicial */
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    color: #FFFF;
+    transition: background-color 2s; /* Transición de color de fondo en 2 segundos */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
 section {
-    padding: 2rem;
     margin: 0 auto;
     background-color: #28282c; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
     width: 82%;
     text-align: center;
+    max-width: 1800px;
 
 }
 
@@ -258,6 +322,10 @@ button:hover {
 
 .svg-color-react {
     fill: #61DAFB; 
+}
+
+.svg-color-Luis {
+    fill: #dddddd; 
 }
 
 /* ---------------------------------------------- */
@@ -400,6 +468,7 @@ button:hover {
 #typing-text {
     font-size: 50px;
     font-family: 'Quicksand', sans-serif;
+    min-height: 80px;
 }
 
 
@@ -407,5 +476,53 @@ button:hover {
     max-width: 100%;
 }
 
+.containeri {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #28282c;
+    color: #FFFF;
+}
 
 
+.calendario {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.calendario-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+
+.image-overlay {
+    position: relative;
+    width: 100%;
+    
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    min-height: 80px;
+}
+
+.centered-text p {
+    color: #ddddddcc;
+    font-size: 50px;
+    font-family: 'Quicksand', sans-serif;
+    min-height: 80px;
+}
+
+.centered-text h3 {
+    color: #ddddddcc;
+    font-size: 50px;
+    font-family: 'Quicksand', sans-serif;
+    min-height: 80px;
+}

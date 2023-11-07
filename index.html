@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Mota</title>
     <link rel="stylesheet" href="./assets/CSS/styles.css">
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
     <script src="./assets/JS/script.js"></script>
+    <script src="./assets/JS/scrollreveal.js"></script>
     <script src="./assets/JS/typing.js"></script>
+    <script src="./assets/JS/typing2.js"></script>
     <script src="./assets/JS/script2.js"></script>
     <script src="./assets/JS/script3.js"></script>
 </head>
@@ -27,24 +30,54 @@
 
     </div>
     
+        <div id="icon-message">
+            <img src="./assets/img/Claro.jpg" alt="Imagen">
+            <p>¿Acaso creíste que había modo claro? No herman@ dev.</p>
+            <br>
+            <p>"Subestimas el poder del Lado Oscuro. Si no luchas, entonces te encontrarás con tu destino."</p>
+            <p>- Darth Vader, 'El retorno del Jedi'.</p>
+        </div>    
+    
     <div>  
         <nav>
+            <div class="icon-container">
+                <a href="#home" id="icon-trigger2"><img src="assets/img/Logo-icono.svg" alt="Icono"></a>
+            </div>
+
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#acerca">Acerca de mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#Game">¿Jugamos?</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+            </ul>
+
+            <div class="icon-container">
+                <a href="#" id="icon-trigger"><img src="assets/img/sun.png" alt="Icono"></a>
+                <script>
+                    const iconTrigger = document.getElementById('icon-trigger');
+                    const iconMessage = document.getElementById('icon-message');
+                
+                    iconTrigger.addEventListener('click', function () {
+                        if (iconMessage.style.display === 'none' || iconMessage.style.display === '') {
+                            iconMessage.style.display = 'block';
+                            setTimeout(() => {
+                                iconMessage.style.backgroundColor = '#15141A'; // Cambia el color de fondo después de 2 segundos
+                            }, 2000); // 2000 milisegundos (2 segundos)
+                        } else {
+                            iconMessage.style.display = 'none';
+                            iconMessage.style.backgroundColor = '#fff'; // Restaura el fondo blanco
+                        }
+                    });
+                </script>
+            </div>
+        </nav>
     
     <header id="home">
         <div>  
-            
             <h1>Hola, <br> soy Luis </h1>
             <p id="typing-text"></p>
             <button onclick="descargarPDF()">Descargar CV</button>
-            
         </div>
         
         <img src="./assets/img/M2.jpeg" alt="Retrato animado">
@@ -73,6 +106,13 @@
             liderar en el desarrollo de software es clave para lograr el éxito. Mi nombre no 
             solo es un acrónimo, es un reflejo de mi dedicación a brindar soluciones digitales innovadoras, 
             aportando un toque personal y profesional a cada proyecto.
+
+            <div class="tec-logos">
+                <div class="logo-card" onmouseover="hoverCard(this, 'Luis')" onmouseout="unhoverCard(this, 'Luis')">
+                    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 1296"><polygon points="128.82 124.84 101.23 124.84 101.23 648.9 128.82 621.32 128.82 124.84"/><polygon points="171.88 124.2 144.3 124.2 144.3 401.25 171.88 373.66 171.88 124.2"/><polygon points="254.37 587.74 226.78 615.49 226.78 901.77 254.37 874.19 254.37 587.74"/><polygon points="212.52 629.83 184.93 657.57 184.93 943.85 212.52 916.27 212.52 629.83"/><polygon points="170.78 672.35 143.2 698.77 143.2 985.05 170.78 957.47 170.78 672.35"/><polygon points="211.26 123.52 183.68 123.52 183.68 290.92 211.26 263.33 211.26 123.52"/><polygon points="183.68 362.25 211.26 334.67 211.26 289.01 183.68 316.59 183.68 362.25"/><polygon points="101.23 673.05 255.31 518.97 255.31 560.03 128.71 687.95 128.71 1051.91 100.52 1078.78 101.23 673.05"/><polygon points="144.38 571.26 144.03 605.74 268.62 481.15 268.62 859.84 296.2 832.26 296.2 453.56 311.42 438.35 311.42 818.36 339 790.78 339 410.77 352.52 397.25 352.52 776.73 380.1 749.14 380.1 369.67 400.36 349.41 400.36 316.59 144.38 571.26"/><polygon points="144.38 506.26 400.36 251.6 400.36 284.42 144.03 540.74 144.38 506.26"/><polygon points="144.38 1007.65 400.36 752.98 400.36 785.8 144.03 1042.12 144.38 1007.65"/><polygon points="101.61 1112.28 379.66 835.66 379.66 871.3 101.23 1149.73 101.61 1112.28"/><polygon points="144.38 433.62 400.36 178.95 400.36 211.77 144.03 468.09 144.38 433.62"/><polygon points="224.72 287.75 398.46 115.33 398.46 148.14 224.38 322.22 224.72 287.75"/><polygon points="327 121.61 250.64 197 250.64 122.68 223.06 122.68 223.06 258.37 250.64 230.79 359.21 122.21 327 121.61"/><polygon points="400.36 878.22 106.08 1171.06 143.2 1171.02 408.42 905.8 755.5 905.8 755.5 923.48 428.95 923.48 401.37 951.07 755.5 951.07 755.5 966.47 385.96 966.47 358.38 994.05 755.5 994.05 755.5 1014.14 597.81 1171.06 634.93 1171.02 783.08 1022.87 783.08 1022.15 783.08 986.69 783.08 905.8 783.08 878.37 783.08 878.22 400.36 878.22"/><polygon points="727.98 1009.17 341.57 1009.89 316.07 1035.39 664.72 1035.39 528.38 1171.06 565.5 1171.02 701.13 1035.39 701.7 1035.39 727.98 1009.17"/><polygon points="586.9 1051.23 585.4 1051.23 300.46 1051.23 272.88 1078.81 557.68 1078.81 464.98 1171.06 502.1 1171.02 621.89 1051.23 586.9 1051.23"/><polygon points="513.35 1094.03 478.36 1094.03 476.86 1094.03 294.82 1094.03 278.84 1094.03 258.13 1094.03 180.69 1171.08 217.79 1171.06 267.24 1121.61 449.14 1121.61 427.14 1143.41 278.84 1143.41 251.26 1170.99 435.59 1170.47 513.35 1094.03"/>
+                    </svg>
+                </div>
+            </div>
 
             <br> <br> <br> <hr/> <br> <br>
 
@@ -122,8 +162,22 @@
         </div>
         
         <br><br><br><hr/><br><br>
+        
+    </section>
+    
+    <section class="containeri prueba">
 
-        </section>
+        <div class="calendario-container">
+            <div class="image-overlay">
+                <img class="calendario" src="./assets/img/calendario.png" alt="calendario azteca">
+                <div class="centered-text">
+                    <h3>Residente en...</h3>
+                        <p id="typing-text2"></p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
     <!--------------------------------------------------------------------------------->
         <section id="proyectos" class="container">
             <h2 style="display: flex; justify-content: center;">Proyectos</h2>
@@ -320,8 +374,10 @@
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./assets/JS/script.js"></script>
+
+<script src="./assets/JS/ScrollRev.js"></script>
 
 </html>
