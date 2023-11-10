@@ -30,7 +30,7 @@ SR.reveal('.Loc', {
 
 SR.reveal('.tec-logos', {
 
-    duration: 2000,
+    duration: 3000,
     origin: 'right',
     distance: '300px',
 
@@ -38,7 +38,7 @@ SR.reveal('.tec-logos', {
 
 SR.reveal('.Servicios', {
 
-    duration: 3000,
+    duration: 4000,
     origin: 'bottom',
     distance: '300px',
 
