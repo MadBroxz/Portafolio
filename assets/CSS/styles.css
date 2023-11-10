@@ -18,6 +18,7 @@ body {
     line-height: 1.6;
     color: #333333;
     background-color: #15141A;
+    overflow-x: hidden;
 }
 
 /* ........................................................................... */
@@ -69,6 +70,7 @@ body {
     text-transform: uppercase;
     margin-left: 10px;
     font-weight: bolder;
+    font-family: 'Quicksand';
 }
 
   /* ............................................................................. */
@@ -76,22 +78,25 @@ body {
 
 /* Estilos de la sección de inicio */
 header {
+    max-width: 1800px;
     color: white;
     background-color: #15141A;
     display: flex; /* Utilizamos flexbox para distribuir los elementos */
     align-items: center; /* Centramos verticalmente los elementos */
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     font-size: 44px;
     font-family: 'Quicksand', sans-serif;
-    max-width: 1800px;
+    margin-top: 20px;
 }   
 
 header div {
-    padding-left: 120px;
+    margin: auto;
+    margin-left: 120px;
 }
 
 header img {
-    max-width: 800px;
+    max-width: 750px;
     padding-right: 120px;
 }
 
@@ -525,4 +530,101 @@ button:hover {
     font-size: 50px;
     font-family: 'Quicksand', sans-serif;
     min-height: 80px;
+}
+
+/* ----------------------------------------------------- */
+
+.Servicios {
+    display: flex;
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.servicio {
+    text-align: center; /* Centra el texto */
+    width: 250px; /* Ancho de cada tarjeta */
+    padding: 20px; /* Espaciado interno de la tarjeta */
+    background-color: #3b3b3f;
+    color: #28282c;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    transform: translateY(20px); /* Inicialmente, desplaza las tarjetas hacia abajo */
+    transition: transform 0.5s;
+    margin-top: 50px;
+}
+
+.logos {
+    width: 60px;
+    height: auto;
+    fill: #28282c;
+    margin-bottom: 10px;
+}
+
+.Servicios .servicio {
+    animation: slide-up 1s ease-in-out forwards; /* Aplica la animación cuando el usuario llega a la sección */
+}
+
+@keyframes slide-up {
+    to {
+        transform: translateY(0); /* Mueve la tarjeta hacia arriba */
+    }
+}
+
+
+.servicio:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    animation: slide-up 2s;
+    color: #FFFF;
+}
+
+.svg-color-Desarrollo {
+    fill: #4CAF50;
+}
+
+.svg-color-Diseño {
+    fill: #673AB7;
+}
+
+.svg-color-Soporte {
+    fill: #1565C0;
+}
+
+/* ----------------------------------------------------------- */
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 7px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4B6CC1; /* Color del indicador */
+    border-radius: 5px; /* Bordes redondeados del indicador */
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo de la barra de desplazamiento */
+}
+
+  /* Estilo para Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #4B6CC1 transparent;
+}
+
+  /* Estilo para Microsoft Edge */
+  * {
+    -ms-overflow-style: none;
+}
+
+  /* Estilo para el indicador de la barra de desplazamiento en Microsoft Edge */
+  *::-webkit-scrollbar-thumb {
+    background-color: #4B6CC1; /* Color del indicador */
+    border-radius: 5px; /* Bordes redondeados del indicador */
+}
+
+  /* Estilo para el fondo de la barra de desplazamiento en Microsoft Edge */
+  *::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo de la barra de desplazamiento */
 }
