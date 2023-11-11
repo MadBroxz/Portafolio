@@ -7,6 +7,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: #4B6CC1 transparent;
+    -ms-overflow-style: none;
 }
 
 body {
@@ -24,7 +27,7 @@ body {
 /* ........................................................................... */
 
 .loading-page {
-    position: absolute;
+    position: Fixed;
     top: 0;
     left: 0;
     background: #15141A;
@@ -87,7 +90,7 @@ header {
     gap: 20px;
     font-size: 44px;
     font-family: 'Quicksand', sans-serif;
-    margin-top: 20px;
+    margin: 0 auto;
 }   
 
 header div {
@@ -607,16 +610,6 @@ button:hover {
     background-color: transparent; /* Color de fondo de la barra de desplazamiento */
 }
 
-  /* Estilo para Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #4B6CC1 transparent;
-}
-
-  /* Estilo para Microsoft Edge */
-  * {
-    -ms-overflow-style: none;
-}
 
   /* Estilo para el indicador de la barra de desplazamiento en Microsoft Edge */
   *::-webkit-scrollbar-thumb {
