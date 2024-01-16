@@ -277,6 +277,13 @@ button:hover {
     gap: 20px; /* Espacio entre las tarjetas */
 }
 
+.tec-logosP {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre las tarjetas */
+}
+
 .logo-card {
     text-align: center; /* Centra el texto */
     width: 200px; /* Ancho de cada tarjeta */
@@ -288,6 +295,18 @@ button:hover {
     transform: translateY(20px); /* Inicialmente, desplaza las tarjetas hacia abajo */
     transition: transform 0.5s;
     margin-top: 50px;
+}
+
+.logo-cardP {
+    text-align: center; /* Centra el texto */
+    width: 110px; /* Ancho de cada tarjeta */
+    padding: 10px; /* Espaciado interno de la tarjeta */
+    background-color: #3b3b3f;
+    color: #28282c;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    transform: translateY(20px); /* Inicialmente, desplaza las tarjetas hacia abajo */
+    transition: transform 0.5s
 }
 
 .tec-logos .logo-card {
@@ -302,6 +321,13 @@ button:hover {
 
 
 .logo-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    animation: slide-up 2s;
+    color: #FFFF;
+}
+
+.logo-cardP:hover {
     transform: translateY(-5px); 
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
     animation: slide-up 2s;
@@ -332,6 +358,9 @@ button:hover {
     fill: #61DAFB; 
 }
 
+.svg-color-tailwind {
+    fill: #38B2AC; 
+}
 .svg-color-Luis {
     fill: #dddddd; 
 }
@@ -444,11 +473,12 @@ button:hover {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 }
 
 .project {
+    position: relative;
     padding: 20px;
     transition: transform 0.3s ease-in-out;
     margin: 20px;
@@ -468,6 +498,17 @@ button:hover {
 
 .project p {
     font-size: 14px;
+}
+
+.project-content img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-content img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 
