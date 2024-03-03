@@ -15,7 +15,6 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Michroma", sans-serif;
     height: 100vh;
     font-size: 16px;
     line-height: 1.6;
@@ -662,3 +661,105 @@ button:hover {
   *::-webkit-scrollbar-track {
     background-color: transparent; /* Color de fondo de la barra de desplazamiento */
 }
+
+@media screen and (max-width: 768px) {
+    
+    
+    header img {
+        display: none; /* Oculta la imagen dentro del header */
+    }
+    
+    header {
+        font-size: 32px;
+    }
+    
+    header#home {
+        text-align: left; /* Alinea el contenido del header a la izquierda */
+        padding: 10px; /* Añade un poco de espacio para mayor legibilidad */
+    }
+
+    header div {
+        margin: auto;
+        margin-left: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    header#home > div {
+        width: 100%; /* Hace que el contenedor del header ocupe el ancho completo */
+    }
+
+    header#home p {
+        font-size: 32px; /* Tamaño de letra más pequeño para dispositivos móviles */
+    }
+
+    #Game {
+        display: none; /* Oculta completamente la sección Game en dispositivos móviles */
+    }
+
+    nav ul {
+        display: none;
+    }
+    
+    nav {
+        position: static;
+    }
+
+    .containeri {
+        display: none; /* Oculta completamente la sección en dispositivos móviles */
+    }
+
+    #acerca .about {
+        padding-left: 0; /* Elimina el padding izquierdo */
+        padding-right: 0; /* Elimina el padding derecho */
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+
+    .logo-card {
+        text-align: center; /* Centra el texto */
+        width: 130px; /* Ancho de cada tarjeta */
+        padding: 15px; /* Espaciado interno de la tarjeta */
+        background-color: #3b3b3f;
+        color: #28282c;
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+        transform: translateY(20px); /* Inicialmente, desplaza las tarjetas hacia abajo */
+        transition: transform 0.5s;
+        margin-top: 30px;
+    }
+
+    footer p {
+        font-size: 14px; /* Tamaño de letra más pequeño para dispositivos móviles */
+        margin-top: 30px;
+    }
+
+    .tec-logos svg:last-of-type {
+        width: 100px;
+        height: 80px;
+    }
+
+}
+
+@media screen and (min-width: 1360px) {
+    
+    header {
+        max-width: 1200px;
+    }   
+
+    header img {
+        max-width: 750px;
+        padding-right: 0px;
+    }
+
+    header div {
+        margin: auto;
+        margin-left: 0px;
+    }
+
+}
+
