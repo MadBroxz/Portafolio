@@ -276,6 +276,14 @@ button:hover {
     gap: 20px; /* Espacio entre las tarjetas */
 }
 
+.tec-logos > div {
+    flex: 1 0 calc(25% - 20px); /* 25% de ancho, menos el espacio entre tarjetas */
+}
+
+.tec-logos .logo-card h4 {
+    font-size: 20px; /* Tamaño de letra específico */
+}
+
 .tec-logosP {
     display: flex;
     justify-content: space-around; 
@@ -298,7 +306,7 @@ button:hover {
 
 .logo-cardP {
     text-align: center; /* Centra el texto */
-    width: 110px; /* Ancho de cada tarjeta */
+    width: 130px; /* Ancho de cada tarjeta */
     padding: 10px; /* Espaciado interno de la tarjeta */
     background-color: #3b3b3f;
     color: #28282c;
@@ -362,6 +370,10 @@ button:hover {
 }
 .svg-color-Luis {
     fill: #dddddd; 
+}
+
+.svg-color-Postgre {
+    fill: #336791; 
 }
 
 /* ---------------------------------------------- */
